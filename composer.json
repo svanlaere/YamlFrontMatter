@@ -1,5 +1,5 @@
 {
-    "name": "kzykhys/yaml-front-matter",
+    "name": "svanlaere/yaml-front-matter",
     "description": "YAML Front-matter Parser/Dumper for PHP",
     "license": "MIT",
     "keywords": ["yaml", "front-matter", "parser"],

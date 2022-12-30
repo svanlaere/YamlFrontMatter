@@ -103,7 +103,7 @@ class Document implements \ArrayAccess, \IteratorAggregate
     /**
      * {@inheritdoc}
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
         return isset($this->config[$offset]);
     }
@@ -111,7 +111,7 @@ class Document implements \ArrayAccess, \IteratorAggregate
     /**
      * {@inheritdoc}
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): bool
     {
         return $this->config[$offset];
     }
@@ -119,7 +119,7 @@ class Document implements \ArrayAccess, \IteratorAggregate
     /**
      * {@inheritdoc}
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, mixed $value): void
     {
         $this->config[$offset] = $value;
     }
@@ -127,7 +127,7 @@ class Document implements \ArrayAccess, \IteratorAggregate
     /**
      * {@inheritdoc}
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
         unset($this->config[$offset]);
     }
@@ -135,7 +135,7 @@ class Document implements \ArrayAccess, \IteratorAggregate
     /**
      * {@inheritdoc}
      */
-    public function getIterator()
+    public function getIterator(): \Traversable
     {
         return new \ArrayIterator($this->config);
     }
@@ -162,5 +162,4 @@ class Document implements \ArrayAccess, \IteratorAggregate
 
         return $itemA;
     }
-
 }
